@@ -1,6 +1,6 @@
 import { LoginForm, Section } from 'components';
 
-export const Login = () => {
+export default function Login() {
   return (
     <main>
       <Section>
@@ -8,4 +8,4 @@ export const Login = () => {
       </Section>
     </main>
   );
-};
+}

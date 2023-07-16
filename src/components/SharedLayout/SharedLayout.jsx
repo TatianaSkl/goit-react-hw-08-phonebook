@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import { selectIsLoggedIn } from 'redux/auth/selectors';
 import { AuthNav, UserMenu } from 'components';
 import { Container, Header, LinkNav } from './SharedLayout.styled';
+import { Suspense } from 'react';
 
 export const SharedLayout = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
@@ -19,7 +20,9 @@ export const SharedLayout = () => {
         </nav>
         {isLoggedIn ? <UserMenu /> : <AuthNav />}
       </Header>
-      <Outlet />
+      <Suspense fallback={null}>
+        <Outlet />
+      </Suspense>
       <ToastContainer autoClose={2500} />
     </Container>
   );

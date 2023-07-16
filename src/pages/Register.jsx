@@ -1,6 +1,6 @@
 import { RegisterForm, Section } from 'components';
 
-export const Register = () => {
+export default function Register() {
   return (
     <main>
       <Section>
@@ -8,4 +8,4 @@ export const Register = () => {
       </Section>
     </main>
   );
-};
+}

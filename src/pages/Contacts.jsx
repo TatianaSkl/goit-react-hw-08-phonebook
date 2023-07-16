@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { fetchContacts } from 'redux/contacts/operations';
 import { Section, ContactForm, ContactList, Filter, Heading } from 'components';
 
-export const Contacts = () => {
+export default function Contacts() {
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -22,4 +22,4 @@ export const Contacts = () => {
       </Section>
     </main>
   );
-};
+}
